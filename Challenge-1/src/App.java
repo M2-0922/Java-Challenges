@@ -22,9 +22,17 @@ public class App {
         // }
 
         // Aya's Solution
-        for(int i = input; i > 0; i--){
-            System.out.println("@".repeat(i));
-        }
+        // for(int i = input; i > 0; i--){
+            // for will iterate from 1 to input
+            // System.out.println("@".repeat(i));
+            // repeat will repeat the string by the number of times
+            // that is passed to it
+            // so if i = 5, then "@".repeat(i) will print @@@@@
+            // if i = 3, then "@".repeat(i) will print @@@
+            // if i = 1, then "@".repeat(i) will print @
+            // if i = 0, then "@".repeat(i) will print nothing
+            // and the loop will end
+        // }
         
         // Shoiri's solution
         // for(int i = input; i > 0; i--){
@@ -37,20 +45,6 @@ public class App {
         //     }
         // }
 
-        // Nested loop solution
-        // while (input != 0) {
-        //     for (int i = 0; i < input; i++) {
-        //         for (int j = input - i; j > 0; j--) {
-        //             System.out.print("@");
-        //         }
-        //         System.out.println();
-        //     }
-        //     System.out.println("Enter a number: ");
-        //     input = scanner.nextInt();
-        // }
-        // scanner.close();
-
-
         // Maho's solution
         // System.out.println("Enter the initial number of d's");
 
@@ -62,6 +56,30 @@ public class App {
         //     System.out.println();
         // }
 
+        // Nested loop solution
+        while (input != 0) {
+            // Create a loop that will run until the input is 0
+            // This loop will print the number of @'s that the user entered
+            for (int i = 0; i < input; i++) {
+                // This loop will print the @'s
+                // The number of @'s will be the same as the input
+                for (int j = input - i; j > 0; j--) {
+                    // This loop will print the @'s
+                    // The number of @'s will be the same as the input
+                    // The number of @'s will decrease by 1 each time
+                    System.out.print("@");
+                    // Print the @'s
+                }
+                System.out.println();
+                // Print a new line
+            }
+            System.out.println("Enter a number: ");
+            input = scanner.nextInt();
+            // Ask the user to enter a new number
+        }
+        // scanner.close();
+
         scanner.close();
+        // scanner.close(); for the scanner to close and not give an error message
     }
 }
