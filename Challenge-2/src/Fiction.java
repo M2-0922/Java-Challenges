@@ -3,10 +3,24 @@ public class Fiction extends Book {
     public Fiction(String title, double price) {
         super(title, price);
     }
-    
+
     @Override
-    public void setPrice() {
-        System.out.println("Title-" + title + " Cost-$" + price);
+    public String getTitle() {
+        return title;
     }
 
+    @Override
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }

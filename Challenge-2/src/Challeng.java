@@ -13,9 +13,11 @@ public class Challeng {
         bookList[0] = fiction;
         bookList[1] = nonFiction;
 
-        System.out.println("Title of fiction book:\n" + bookList[0].title);
-        System.out.println("Title of non fiction book:\n" + bookList[1].title);
-        bookList[0].setPrice();
-        bookList[1].setPrice();
+        System.out.println("Title of fiction book:");
+        System.out.println(bookList[0].getTitle());
+        System.out.println("Title of non fiction book:");
+        System.out.println(bookList[1].getTitle());
+        System.out.println("Title-" + bookList[0].getTitle() + " Cost-$" + bookList[0].getPrice());
+        System.out.println("Title-" + bookList[1].getTitle() + " Cost-$" + bookList[1].getPrice());
     }
 }
