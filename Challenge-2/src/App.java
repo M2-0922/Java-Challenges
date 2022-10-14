@@ -11,9 +11,9 @@ public class App {
         
         String[][] bookInfo = new String[2][3];
         bookInfo[0][0] = "Title of fiction book:";
-        bookInfo[0][1] = fiction.title;
+        bookInfo[0][1] = fiction.getTitle();
         bookInfo[0][2] = "Title of non fiction book:";
-        bookInfo[1][0] = nonFiction.title;
+        bookInfo[1][0] = nonFiction.getTitle();
         bookInfo[1][1] = "Title-Harry Potter Cost-" + fiction.setPrice();
         bookInfo[1][2] = "Title-Calculus Cost-" + nonFiction.setPrice();
         // System.out.println(Arrays.deepToString(bookInfo));
