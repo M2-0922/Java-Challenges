@@ -1,7 +1,12 @@
 public class NonFiction extends Book {
 
-    public NonFiction(String title, double price) {
-        super(title, price);
+    public NonFiction(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
     }
     
     @Override
@@ -10,17 +15,9 @@ public class NonFiction extends Book {
     }
 
     @Override
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Override
     public double getPrice() {
+        setPrice(37.99);
         return price;
     }
-    
-    @Override
-    public void setPrice(double price) {
-        this.price = price;
-    }
+
 }

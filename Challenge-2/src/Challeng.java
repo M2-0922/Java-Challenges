@@ -3,11 +3,13 @@ public class Challeng {
     public static void main(String[] args) throws Exception {
 
         //make instances
-        Fiction fiction = new Fiction("Harry Potter", 24.99);
-        NonFiction nonFiction = new NonFiction("Calculus", 37.99);
+        Fiction fiction = new Fiction("Harry Potter");
+        NonFiction nonFiction = new NonFiction("Calculus");
 
         //make array(bookList) of fiction and nonfiction classes's instance
         Book[] bookList = new Book[2];
+
+        System.out.println(fiction.getPrice());
 
         //store references to array
         bookList[0] = fiction;
