@@ -11,6 +11,7 @@ public class Fiction extends Book {
         this.setPrice();
     }
 
+    @Override
     public void setPrice(){
         this.setPrice(24.99);
     }

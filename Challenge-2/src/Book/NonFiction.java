@@ -11,6 +11,7 @@ public class NonFiction extends Book {
         this.setPrice();
     }
 
+    @Override
     public void setPrice(){
         this.setPrice(37.99);
     }
