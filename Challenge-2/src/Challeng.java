@@ -9,8 +9,6 @@ public class Challeng {
         //make array(bookList) of fiction and nonfiction classes's instance
         Book[] bookList = new Book[2];
 
-        System.out.println(fiction.getPrice());
-
         //store references to array
         bookList[0] = fiction;
         bookList[1] = nonFiction;
