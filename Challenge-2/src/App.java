@@ -31,10 +31,10 @@ public class App {
      *  @param price
      *  
      * */
-	public static void getArray(String[][] bookArr, int type, String title, double price) {
-		
-		bookArr[type][0] = type == 0 ? "Title of fiction book:" : "Title of non fiction book:";
-		bookArr[type][1] = title;
-		bookArr[type][2] = "Title-" + title + " Cost-$" + String.valueOf(price);
-	}
+     public static void getArray(String[][] bookArr, int type, String title, double price) {
+
+	     bookArr[type][0] = type == 0 ? "Title of fiction book:" : "Title of non fiction book:";
+	     bookArr[type][1] = title;
+	     bookArr[type][2] = "Title-" + title + " Cost-$" + String.valueOf(price);
+     }
 }
