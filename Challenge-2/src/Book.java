@@ -25,4 +25,4 @@ public abstract class Book {
 	}
 
 	public abstract double setPrice();
-	}
+}
