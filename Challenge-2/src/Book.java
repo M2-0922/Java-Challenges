@@ -12,6 +12,11 @@ public abstract class Book {
         this.title = title;
         this.price = setPrice(price);
     }
+
+    // public Book(String title, double price) {
+    //     this.title = title;
+    //     this.price = price;
+    // }
     
     public String getTitle() {
         return title;
