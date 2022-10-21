@@ -10,7 +10,6 @@
 //Create an abstract method named `setPrice()`
 
 
-
 public abstract class Book {
   private String title;
   protected double price;
