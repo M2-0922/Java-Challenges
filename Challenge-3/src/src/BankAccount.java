@@ -75,6 +75,8 @@ public class BankAccount<s1, s2> {
     public void showMenu(){
 
         char option = '\0';
+        int check = 0;
+        
         Scanner scanner = new Scanner(System.in);
         System.out.println("==================================");
         System.out.println("Welcome " + accountHolderName);
@@ -155,11 +157,19 @@ public class BankAccount<s1, s2> {
 	                    default:
 	                        System.out.println("Invalid option! Please enter again.");
 	                        break;
-                }
+                }	            
+	                
             }catch(Exception e){
-            	System.out.println("Malfunction occurred. Please start again.");
+            	System.out.println("Malfunction occurred.");
+            	check = -1;
+            }finally {
+            	if(balance == 0)
+            	{
+            		check = -1;
+            		System.out.println("The balance is now zero. Exit.");
+            	}
             }
-        }while(option != '5');
+        }while(option != '5' && check == 0);
         System.out.println();
         System.out.println("Thank you for using our services!");
     }
