@@ -4,7 +4,6 @@
  * @version 1.0
  */
 
-// ATM Machine CLI
  
 public class Main {
 
