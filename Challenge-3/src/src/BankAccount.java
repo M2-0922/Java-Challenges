@@ -1,3 +1,4 @@
+import java.security.MessageDigest;
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -29,9 +30,6 @@ public class BankAccount<s2> {
         this.balance = balance;
     }
 
-    // public s1 getAccountNumber() {
-    //     return accountNumber;
-    // }
     public String getAccountNumber(){
         return accountNumber;
     }
@@ -98,24 +96,11 @@ public class BankAccount<s2> {
         System.out.print("Enter an option: ");
     }
 
-    public void showInputMismatchEx() {
-        System.out.println("==================================");
-        System.out.print("You entered invalid number. Please try again.");
-        System.out.println();
+    public void showErrorMessage(String msg) {
+        StringBuilder message = new StringBuilder("==================================\n");
+        message.append(msg);
+        System.out.println(message);
     }
-
-    public void showNoSuchElementEx() {
-        System.out.println("==================================");
-        System.out.print("You didn't entered anything. Please try again.");
-        System.out.println();
-    }
-
-    public void showEx(){
-        System.out.println("==================================");
-        System.out.print("Sorry, something happend. Please try again.");
-        System.out.println();
-    }
-
 
     public void showMenu(){
 
@@ -139,7 +124,7 @@ public class BankAccount<s2> {
                     case '2':
                         System.out.println("==================================");
                         System.out.print("Enter an amount to deposit: ");
-                        double amount = 0;                        
+                        double amount = 0;
                         amount = scanner.nextDouble();
                         deposit(amount);
                         System.out.println("==================================");
@@ -151,10 +136,9 @@ public class BankAccount<s2> {
                         System.out.print("Enter an amount to withdraw: ");
                         double amount2 = 0;
                         amount2 = scanner.nextDouble();
-                        System.out.println("==================================");
                         withdraw(amount2);
                         System.out.println("==================================");
-                        System.out.println();
+                        System.out.println();        
                         break;
 
                     case '4':
@@ -168,19 +152,18 @@ public class BankAccount<s2> {
                         System.out.println("==================================");
                         scanner.close();
                         break;
-
                     default:
                         System.out.println("Invalid option! Please enter again.");
                         break;
-                    }
-            }catch(InputMismatchException e3){                
-                showInputMismatchEx();
-            }catch(NoSuchElementException e3){                
-                showNoSuchElementEx();
-            }catch(Exception e3){                
-                showEx();
+                    }   
+            }catch(InputMismatchException  e){               
+                showErrorMessage("You entered invalid amount. Please try again.");
+                scanner.nextLine();
+            }catch(IllegalStateException  e){               
+                showErrorMessage("System error. Please try again.");
+            }catch(NoSuchElementException e){                
+                showErrorMessage("System error. Please try again.");
             }
-            scanner.nextLine();
         }while(option != '5');
 
         System.out.println();
